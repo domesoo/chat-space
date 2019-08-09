@@ -1,42 +1,56 @@
 .wrapper
 
+  = render 'shared/side_bar'
 
-
-  = render 'chat_side'
-
-  .chat-main
-    .main-header
-      .main-header__left-box
-        %h2.main-header__left-box__current-group
-          test
-        %ul.main-header__left-box__member-list
-          Member :
-          %li.main-header__left-box__member-list__member
-            &nbsp;test user
-      .main-header__edit-btn
-        Edit
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
     .messages
       .message
-        .message__upper-info
-          %p.message__upper-info__talker
-            test user
-          %p.message__upper-info__date
-            2019/08/07(wed)16:58
-        %p.message__text
-          test test test
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
       .message
-        .message__upper-info
-          %p.message__upper-info__talker
-            test user2
-          %p.message__upper-info__date
-            2019/08/07(wed)17:01
-        %p.message__text
-          test2 test2 test2
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
     .form
       %form
-        %input.form__message{type: 'text', placeholder: ' type a message'}
-          .form__mask
-            %label.form__mask__image
-              = fa_icon 'image', class: 'icon'
-              %input.hidden{type: 'file'}
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
         %input.form__submit{type: 'submit', value: 'Send'}
