@@ -13,8 +13,9 @@ $(function(){
                 </div>
                 <div class="lower-message">
                   <p class="lower-message__content">
-                    ${message.content}
-                  </p>                  
+                    ${message.content}                    
+                  </p>
+                  <img class="lower-message__image" src=${message.image}>
                 </div>
               </div>`
     return html;
@@ -37,10 +38,12 @@ $(function(){
     .done(function(message){
       var html = buildMessage(message);
       $('.messages').append(html)
-      $('#message_content').val('')
-      $('#message_image').val('')
-      $('.form__submit').attr('disabled', false);
+      // $('#message_content').val('')
+      // $('#message_image').val('')
+      // $('.form__submit').attr('disabled', false);
+      $('.form__submit')[0].reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+
     })
     .fail(function(){
       alert('エラー')
