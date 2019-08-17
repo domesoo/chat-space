@@ -15,7 +15,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1' #カリキュラム通りに進めた場合、2.5.1か2.3.1です
 
 # どの公開鍵を利用してデプロイするか
-set :ssh_options, auth_methods: ['ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCv9wR9PM34b/bZJBDaZBBG/cyhFo4uoA62tESFx/34vHC7fFntgy58VdMAn5tv7NTQ5r3TTxXcLCrHV8fHsqJNIiUqKUSN3ow5ssrdxjxPaEh5N84WhWFWxqswIMAjabNFAFJeYkgbjhNelXmQyxuiB24x03HnIXnNVT4Y4C8gmRr3JfBLie2XT3/7gDy6KriGXpR/KE4W509+ctfpb4TWihMZBgRRmLzy7t+e2rErvI+0zbfG8bF+jaK23rooreiwMJJSmMIl1kKFcJrIX0bh5uJxQtfT9hs9WYqWLyz7wjz23NtydJxc1x1b25HaGULIr1+PfUMRG4RzKNNRttvODoxHbemt+/gyI6FNItYLZhOsBg1axJDR6zauYZ1RGk5D2kHjoldidQopScxlB6JvV7wFz0Cz8cW/dsTCi8IHb8bBAx1cOFVGMH6BG/wxPFLonpG49HK1X0Kj5oziMGSTpUYkUHWIooP9Yu6D1tOwklWppEAkwkafQoDrGukXSNACVetu6nN0weDs/hlZFHc4hJkc6+dqcYDx2Y5F7Eu7Ni1gYTFkCTsnfLMC6yAKvGa/MdryBG+7KK+iy5FIID1+hcPdVBn/qNqYWkjHm6Q8CSbmJvm6TbN56NA7GHd0KnjdbK1vvsIn7PHUYKYj1uJTaAw7jEW86UgM6dyG9YcUXw== ec2-user@ip-172-31-32-89'],
+set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/K74HPd9v.pem']
 
 # プロセス番号を記載したファイルの場所
