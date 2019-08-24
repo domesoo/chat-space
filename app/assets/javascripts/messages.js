@@ -66,7 +66,7 @@ $(function(){
       .done(function(messages) {
         var insertHTML = '';
         messages.forEach(function(message){
-          insertHTML = buildMessage(message);
+          insertHTML += buildMessage(message);
           $('.messages').append(insertHTML);
         })
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
